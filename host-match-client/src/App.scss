@@ -1,0 +1,297 @@
+// Import Bootstrap and its default variables
+@import "~bootstrap/scss/bootstrap.scss";
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&family=Tourney&display=swap");
+@import "../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+
+$maxWidth: 632px;
+$boxShadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+
+body {
+  max-width: $maxWidth;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  font-family: "Lexend", sans-serif;
+}
+
+.hm-container {
+  margin: 5.75rem 5px 5px;
+  background-color: $white;
+  box-shadow: $boxShadow;
+  border-radius: 0.25rem;
+  height: 85vh;
+  overflow: auto;
+  //background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  //background-size: 400% 400%;
+  //animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.hm-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $dark;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1042;
+  padding: 0.5rem;
+  color: $white;
+}
+
+.hm-content {
+  padding: 1.25rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar-expand .navbar-nav {
+  flex-direction: column;
+  a {
+    color: inherit;
+  }
+}
+
+.offcanvas {
+  //position: absolute;
+  z-index: 1041;
+  transition: none;
+  transform: none;
+  height: 100vh;
+  &.hm-nav-offcanvas {
+    background-color: $dark;
+    color: $gray-400;
+    .navbar {
+      margin-top: 4rem;
+    }
+  }
+}
+
+.nav-toggle-btn {
+  border: 0;
+  outline: 0;
+  box-shadow: none;
+  transition: none;
+  font-size: 1.5rem;
+  &:hover {
+    background-color: $dark;
+    border: 0;
+    outline: 0;
+    box-shadow: none;
+  }
+}
+
+.hm-toast-container {
+  z-index: 20000;
+  width: 100%;
+  .toast {
+    width: 100%;
+    background-color: $white;
+    &.error {
+      background-color: $danger;
+      color: $white;
+    }
+    &.success {
+      background-color: $success;
+      color: $white;
+    }
+  }
+}
+
+.invisible {
+  visibility: none;
+}
+
+.card.user-profile {
+  max-width: 400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hm-search-select-contaimer {
+  position: relative;
+}
+
+.hm-search-select-options-container {
+  max-height: 11rem;
+  overflow: auto;
+}
+
+.hm-list-item {
+  margin-bottom: 0.75rem;
+  border-radius: 8px;
+  //box-shadow: 0px 1px 8px 0px rgba(0,0,0,.20), 0px -1px 8px 0px rgba(0,0,0,.20);
+  font-size: 0.75rem;
+  h5 {
+    font-size: 1rem;
+  }
+  &.clickable {
+    cursor: pointer;
+  }
+  small.sub-title {
+    position: absolute;
+    right: 1rem;
+    top: 0.5rem;
+  }
+}
+
+.hm-list-item-content {
+  img {
+    border-radius: 50%;
+    display: block;
+    border: 1px solid #dadce0;
+  }
+  i {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: $dark;
+    &.fa-user {
+      font-size: 3rem;
+    }
+  }
+}
+
+h6 {
+  font-size: 0.85rem;
+}
+
+.hm-list-item-icon-wrapper {
+  display: flex;
+  align-items: center;
+  font-size: 0.75rem;
+  margin-bottom: 0.5rem;
+  i {
+    //min-width: 1.25rem;
+    margin-right: 0.5rem;
+    font-size: 1rem;
+  }
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.hm-close-span {
+  cursor: pointer;
+}
+
+.hm-badge {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.hm-badge-wrapper {
+  overflow: auto;
+  max-height: 5rem;
+  > span {
+    margin-right: 0.5rem;
+  }
+}
+
+.hm-read-only-prop {
+  display: flex;
+  > *,
+  > .form-control[readonly] {
+    width: 60%;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    &:focus,
+    &:active {
+      border: none;
+      outline: 0;
+      box-shadow: none;
+    }
+  }
+  > label {
+    width: 40%;
+    margin-bottom: 0;
+  }
+}
+
+h1.hm-heading {
+  font-weight: 700;
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+}
+
+.offcanvas-title {
+  //font-family: "Tourney", cursive;
+  font-size: 1.5rem;
+}
+
+button {
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.hm-profile-menu {
+  position: relative;
+  .nav-item.dropdown {
+    position: absolute;
+    bottom: 0.7rem;
+    right: 0;
+    background: transparent;
+    a.dropdown-toggle {
+      padding: 2rem 1.5rem 0;
+      display: inline-block;
+      opacity: 0;
+    }
+  }
+  .dropdown-menu {
+    transform: none !important;
+    top: 3.65rem !important;
+  }
+  i {
+    font-size: 2.25rem;
+    margin: 1rem 0.5rem 0;
+  }
+  a.nav-link {
+    padding: 0;
+  }
+}
+
+i {
+  font-size: 1.5rem;
+  &.hm-button {
+    cursor: pointer;
+    margin-left: 1rem;
+  }
+}
+
+.hm-modal .modal-body {
+  max-width: $maxWidth;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: $boxShadow;
+}
+
+.spinner-overlay {
+  height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 2222222;
+  position: fixed;
+  top: 0;
+  left: 0;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+}

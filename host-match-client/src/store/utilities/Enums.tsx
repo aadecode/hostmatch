@@ -1,0 +1,52 @@
+export enum ETeamAction {
+  CREATE = "CREAT_TEAM",
+  DELETE = "DELETE_TEAM",
+  SET_TEAM = "SET_TEAM",
+  GET = "GET_TEAMS",
+  GET_MY_TEAM = "GET_MY_TEAM",
+}
+
+export enum ECommonAction {
+  ERROR = "DISPLAY_ERROR",
+}
+
+export enum ECollections {
+  TEAMS = "teams",
+  PLAYERS = "players",
+  MATCH_DETAILS = "matchDetails",
+}
+
+export enum ENotificationAction {
+  SET_ERROR = "SET_ERROR",
+  SET_SUCCESS = "SET_SUCCESS",
+  CLEAR = "CLEAR",
+}
+
+export enum EGlobalAction {
+  SET_SPINNER = "SET_SPINNER",
+  HIDE_SPINNER_AND_SHOW_NOTIFICATION = "HIDE_SPINNER_AND_SHOW_NOTIFICATION",
+  CLEAR_NOTIFICATION = "CLEAR_NOTIFICATION",
+  TOGGLE_NOTIFICATION = "TOGGLE_NOTIFICATION",
+}
+
+export enum EPlayerAction {
+  SAVE = "SAVE_PLAYER",
+  GET = "GET_PLAYERS",
+  GET_CURRENT_PLAYER = "GET_CURRENT_PLAYER",
+}
+
+export enum EMatchAction {
+  CREATE_MATCH = "CREATE_MATCH",
+  GET_MY_MATCH_DETAILS = "GET_MY_MATCH_DETAILS",
+  GET_ALL_MATCHES = "GET_MATCHES",
+  GET_MY_HOSTED_MATCHES = "GET_MY_HOSTED_MATCHES",
+  GET_MY_TEAMS_MATCHES = "GET_MY_TEAMS_MATCHES",
+  GET_MATCHES = "GET_MATCHES",
+  SET_CURRENT_MATCH_DETAILS = "SET_CURRENT_MATCH_DETAILS",
+}
+
+export enum EFirestoreKey {
+  searchKey = "searchKey",
+}
+
+export enum EHostAction {}
